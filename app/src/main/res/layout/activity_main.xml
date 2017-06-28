@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#000"
+    android:clickable="true"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/mobile_siri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_zoomin"
+        android:layout_alignEnd="@+id/bt_zoomout"
+        android:layout_alignStart="@+id/bt_zoomin"
+        android:layout_marginBottom="150dp"
+        android:src="@drawable/logo" />
+
+    <Button
+        android:id="@+id/bt_fadein"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_blink"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginStart="43dp"
+        android:onClick="fadeIn"
+        android:text="FadeIn" />
+
+    <Button
+        android:id="@+id/bt_fadeout"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_blink"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_alignLeft="@+id/bt_zoomout"
+        android:layout_alignStart="@+id/bt_zoomout"
+        android:onClick="fadeOut"
+        android:text="FadeOut" />
+
+    <Button
+        android:id="@+id/bt_blink"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/bt_fadeout"
+        android:layout_alignLeft="@+id/bt_fadein"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/bt_fadeout"
+        android:layout_alignStart="@+id/bt_fadein"
+        android:layout_marginBottom="29dp"
+        android:onClick="blink"
+        android:text="Blink" />
+
+
+    <Button
+        android:id="@+id/bt_zoomin"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_fadein"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="43dp"
+        android:layout_marginStart="43dp"
+        android:onClick="zoomIn"
+        android:text="Zoom In" />
+
+    <Button
+        android:id="@+id/bt_zoomout"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_fadeout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:onClick="zoomOut"
+        android:text="Zoom Out" />
+
+
+</RelativeLayout>
